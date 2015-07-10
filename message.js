@@ -1,0 +1,1 @@
+Message = Ember.Application.create();
