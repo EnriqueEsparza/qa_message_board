@@ -4,6 +4,9 @@
   <title>Q & A Message Board</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
 
   <script src="libs/jquery-1.11.3.js"></script>
   <script src="libs/ember-template-compiler-1.12.0.js"></script>
@@ -16,19 +19,24 @@
   <script src="router.js"></script>
   <script src="store.js"></script>
 
-
+  <script src="controllers/question.js"></script>
   <script src="controllers/questions.js"></script>
+  <script src="controllers/new-question.js"></script>
+  <script src="controllers/new-answer.js"></script>
 
 
   <script src="routes/questions.js"></script>
+  <script src="routes/question.js"></script>
+  <script src="routes/recent-answers.js"></script>
 
 
   <script src="models/question.js"></script>
+  <script src="models/answer.js"></script>
 
 
 
   <script>
-  EmberHandlebarsLoader.loadTemplates(['questions']);
+  EmberHandlebarsLoader.loadTemplates(['questions', 'application', 'new-answer', 'new-question', 'question', 'recent-answers']);
   </script>
 
 

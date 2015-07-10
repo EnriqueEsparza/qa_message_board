@@ -1,0 +1,39 @@
+<h1>{{body}}</h1>
+
+{{#if isEditing}}
+<form>
+  <div class="form-group">
+    <label for="author">Author</label>
+    {{input id="author" class="form-control" value=author}}
+  </div>
+
+  <div class="form-group">
+    <label for="question">Question</label>
+    {{textarea id="question" class="form-control"  value=question}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
+</form>
+
+{{else}}
+
+<h2>{{question}}</h2>
+<p>{{author}}</p>
+
+<button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+{{/if}}
+
+<h4>Answers</h4>
+
+{{#each answers}}
+<p>
+  {{text}}
+</p>
+{{/each}}
+
+<p>
+  {{#link-to 'new-answer' this.id class="btn btn-default"}}Answer{{/link-to}}
+</p>
+
+{{outlet}}
